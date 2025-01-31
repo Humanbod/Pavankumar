@@ -1,3 +1,4 @@
+// Download PDF
 document.getElementById('download-pdf').addEventListener('click', function () {
   const content = "This is a dynamically generated PDF content.";
   const blob = new Blob([content], { type: 'application/pdf' });
@@ -8,6 +9,7 @@ document.getElementById('download-pdf').addEventListener('click', function () {
   URL.revokeObjectURL(link.href);
 });
 
+// Download Image
 document.getElementById('download-image').addEventListener('click', function () {
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
@@ -24,6 +26,7 @@ document.getElementById('download-image').addEventListener('click', function () 
   }, 'image/png');
 });
 
+// Download Text File
 document.getElementById('download-text').addEventListener('click', function () {
   const content = "This is a dynamically generated text file.";
   const blob = new Blob([content], { type: 'text/plain' });
