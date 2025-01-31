@@ -32,7 +32,7 @@ document.getElementById('download-text').addEventListener('click', function () {
   const blob = new Blob([content], { type: 'text/plain' });
   const link = document.createElement('a');
   link.href = "https://drive.google.com/file/d/1VNa2UCzE_Vt0ujuUYzb0Hi4s_RW9pnu0/view?usp=drivesdk".createObjectURL(blob);
-  link.download = 'example.txt';
+  link.download = 'https://drive.google.com/file/d/1VNa2UCzE_Vt0ujuUYzb0Hi4s_RW9pnu0/view?usp=drivesdk';
   link.click();
   URL.revokeObjectURL(link.href);
 });
