@@ -1,74 +1,40 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>मेरा पोर्टफोलियो</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Professional Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>मेरा पोर्टफोलियो</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">होम</a></li>
-                    <li><a href="#services">सेवाएँ</a></li>
-                    <li><a href="#contact">संपर्क</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Welcome to My Website</h1>
+  </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>आपका स्वागत है</h2>
-            <p>मैं एक वेब डेवलपर हूँ और मैं आपकी वेबसाइट को बेहतर बनाने में मदद कर सकता हूँ।</p>
-            <a href="#services" class="btn">मेरी सेवाएँ देखें</a>
-        </div>
+  <main>
+    <section id="download-section">
+      <h2>Download Files</h2>
+      <p>Click the buttons below to download files:</p>
+      <div class="download-buttons">
+        <button id="download-pdf">Download PDF</button>
+        <button id="download-image">Download Image</button>
+        <button id="download-text">Download Text File</button>
+      </div>
     </section>
+  </main>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2>मेरी सेवाएँ</h2>
-            <div class="service-list">
-                <div class="service-item">
-                    <h3>वेब डिज़ाइन</h3>
-                    <p>आकर्षक और उपयोगकर्ता-अनुकूल वेबसाइट डिज़ाइन।</p>
-                </div>
-                <div class="service-item">
-                    <h3>वेब डेवलपमेंट</h3>
-                    <p>HTML, CSS, और JavaScript का उपयोग करके वेबसाइट विकसित करना।</p>
-                </div>
-                <div class="service-item">
-                    <h3>SEO</h3>
-                    <p>वेबसाइट को सर्च इंजन के लिए अनुकूलित करना।</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <footer>
+    <p>&copy; 2025 My Professional Website. All rights reserved.</p>
+  </footer>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>संपर्क करें</h2>
-            <form id="contactForm">
-                <label for="name">नाम:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">ईमेल:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">संदेश:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">भेजें</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 मेरा पोर्टफोलियो। सर्वाधिकार सुरक्षित।</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
