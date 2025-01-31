@@ -1,8 +1,35 @@
-// script.js
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    alert(`धन्यवाद, ${name}! आपका संदेश प्राप्त हुआ। हम आपको ${email} पर जल्द ही संपर्क करेंगे।`);
+document.getElementById('download-pdf').addEventListener('click', function () {
+  const content = "This is a dynamically generated PDF content.";
+  const blob = new Blob([content], { type: 'application/pdf' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'example.pdf';
+  link.click();
+  URL.revokeObjectURL(link.href);
+});
+
+document.getElementById('download-image').addEventListener('click', function () {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = 200;
+  canvas.height = 200;
+  ctx.fillStyle = 'blue';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  canvas.toBlob(function (blob) {
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'image.png';
+    link.click();
+    URL.revokeObjectURL(link.href);
+  }, 'image/png');
+});
+
+document.getElementById('download-text').addEventListener('click', function () {
+  const content = "This is a dynamically generated text file.";
+  const blob = new Blob([content], { type: 'text/plain' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'example.txt';
+  link.click();
+  URL.revokeObjectURL(link.href);
 });
